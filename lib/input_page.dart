@@ -1,4 +1,7 @@
+import 'package:bmi_calculator/icon_cont.dart';
+import 'package:bmi_calculator/reusable_cart.dart';
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 const bottomContainerHeight = 80.0;
 const bottomContainerColor = Color(0xFFEB1555);
@@ -21,23 +24,28 @@ class _InputPageState extends State<InputPage> {
           Expanded(child: Row(
             children: <Widget>[
               Expanded(child: ReusableCard(
-                  currentColor: reusableCardColor,
+                currentColor: reusableCardColor,
+                cardChild: IconContent(iconData: FontAwesomeIcons.mars, title:'Male'),
               ),),
               Expanded(child: ReusableCard(
                 currentColor: reusableCardColor,
+                cardChild: IconContent(iconData: FontAwesomeIcons.venus, title:'Female'),
               ),),
             ],
           ),),
           Expanded(child: ReusableCard(
             currentColor: reusableCardColor,
+            cardChild: IconContent(iconData: FontAwesomeIcons.venus, title:'Female'),
           ),),
           Expanded(child: Row(
             children: <Widget>[
               Expanded(child: ReusableCard(
                 currentColor: reusableCardColor,
+                cardChild: IconContent(iconData: FontAwesomeIcons.venus, title:'Female'),
               ),),
               Expanded(child: ReusableCard(
                 currentColor: reusableCardColor,
+                cardChild: IconContent(iconData: FontAwesomeIcons.venus, title:'Female'),
               ),),
             ],
           ),),
@@ -53,21 +61,7 @@ class _InputPageState extends State<InputPage> {
   }
 }
 
-class ReusableCard extends StatelessWidget {
 
-  final Color currentColor;
 
-  ReusableCard({required this.currentColor});
 
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: EdgeInsets.all(15.0),
-      decoration: BoxDecoration(
-        color: currentColor,
-        borderRadius:BorderRadius.circular(10.0),
-      ),
-    );
-  }
-}
 
