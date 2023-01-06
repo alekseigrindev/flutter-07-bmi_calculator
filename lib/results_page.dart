@@ -43,11 +43,7 @@ class ResultsPage extends StatelessWidget {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(
-                    builder: (context) {
-                      return InputPage();
-                    }
-                    ),
+                MaterialPageRoute(builder: (context) => InputPage()),
               );},
             child: Container(
               child: Column(

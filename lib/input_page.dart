@@ -203,11 +203,7 @@ class _InputPageState extends State<InputPage> {
             onTap: () {
               Navigator.push(
                   context,
-                  MaterialPageRoute(
-                      builder: (context) {
-                        return ResultsPage();
-                      }
-                  ),
+                  MaterialPageRoute(builder: (context) => ResultsPage()),
               );
             },
             child: Container(
